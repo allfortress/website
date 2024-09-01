@@ -3,9 +3,7 @@ import { getServerInfo } from "../../lib/shared";
 export function onRequestGet(context) {
   const server = getServerInfo(context.params.server);
   if (!server) {
-    return new Response("Unknown server", {
-      status: 400,
-    });
+    return new Response("Unknown server", { status: 400 });
   }
 
   return new Response(getHtml(server), {
