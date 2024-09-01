@@ -1,0 +1,24 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #d2cdc8;
+    color: #363636;
+}
+
+a:link, a:visited {
+    color: #b35215;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 0;
+}
+.title {
+    color: #b35215;
+}
+.help {
+    margin-top: 50px;
+    font-size: 14px;
+}
