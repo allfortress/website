@@ -1,4 +1,10 @@
 {
+  "name": "allfortress-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev assets"
+  },
   "devDependencies": {
     "wrangler": "^3.73.0"
   }
