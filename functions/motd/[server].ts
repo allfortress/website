@@ -1,7 +1,7 @@
-import { getServerInfo } from "../../lib/shared";
+import { getServerInfo, ServerDetails } from "../../lib/shared";
 
-export function onRequestGet(context) {
-  const server = getServerInfo(context.params.server);
+export const onRequestGet: PagesFunction = ({ params }) => {
+  const server = getServerInfo(params.server as string);
   if (!server) {
     return new Response("Unknown server", { status: 400 });
   }
@@ -11,9 +11,9 @@ export function onRequestGet(context) {
       "Content-Type": "text/html; charset=UTF-8",
     },
   });
-}
+};
 
-function getHtml({ name, ip }) {
+const getHtml = (server: ServerDetails) => {
   return `<!DOCTYPE HTML>
     <html lang="en">
         <head>
@@ -24,11 +24,11 @@ function getHtml({ name, ip }) {
         </head>
         <body>
             <div class="container">
-                <h1 class="title">Welcome to ${name}!</h1>
+                <h1 class="title">Welcome to ${server.name}!</h1>
                 <p class="help">
                     Issue? Contact <a href="/contact" target="_blank">me</a>
                 </p>
             </div>
         </body>
     </html>`;
-}
+};
