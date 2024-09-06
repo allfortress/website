@@ -21,9 +21,12 @@ const getHtml = (server: ServerDetails) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Prophunt</title>
             <link href="/css/style.css" rel="stylesheet">
+            <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+            <link rel="icon" type="image/png" href="/images/favicon.png">
         </head>
         <body>
             <div class="container">
+                <img src="/images/logo.svg" width="140" height="140">
                 <h1 class="title">Welcome to ${server.name}!</h1>
                 <p class="help">
                     Issue? Contact <a href="/contact" target="_blank">me</a>
