@@ -11,6 +11,21 @@ a:link, a:visited {
     color: #b35215;
 }
 
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    background-color: #b35215;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #d2cdc8;
+    text-decoration: none;
+}
+.btn:hover {
+    color: #fff;
+}
+
 .container {
     text-align: center;
     padding: 50px 0;
